@@ -75,3 +75,7 @@ UI.prototype.loadAllCars = function(cars){
 `
     });
 }
+
+UI.prototype.deleteCarFromUI = function(element){
+    element.parentElement.parentElement.remove();
+}

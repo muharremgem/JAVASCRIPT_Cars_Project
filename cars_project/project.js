@@ -4,6 +4,8 @@ const form = document.getElementById("car-form");
 const titleElement = document.querySelector("#title");
 const priceElement = document.querySelector("#price");
 const urlElement = document.querySelector("#url");
+const cardbody = document.querySelectorAll(".card-body")[1];
+
 
 // UI Objesini Başlatma /
 
@@ -23,6 +25,9 @@ function eventListeners(){
         let cars = storage.getCarsFromStorage();
         ui.loadAllCars(cars);
     });
+
+    cardbody.addEventListener("click", deleteCar);
+
 
 }
 
@@ -56,4 +61,11 @@ function addCar(e){
     
 
     e.preventDefault();
+}
+
+function deleteCar(e){
+
+    if(e.target.id === "delete-car"){
+        ui.deleteCarFromUI(e.target);
+    }
 }
