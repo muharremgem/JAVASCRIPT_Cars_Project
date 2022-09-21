@@ -34,5 +34,10 @@ carList.innerHTML += `
         <td><a href="#" id = "delete-car" class = "btn btn-danger">Aracı Sil</a></td>
     </tr> 
 `
+}
 
+UI.prototype.clearInputs = function (element1, element2,element3){
+    element1.value = "";
+    element2.value = "";
+    element3.value = "";
 }

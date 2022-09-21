@@ -33,5 +33,8 @@ function addCar(e){
         // arayüze araç ekleme/
     }
 
+    ui.clearInputs(titleElement,urlElement,priceElement);
+    
+
     e.preventDefault();
 }
