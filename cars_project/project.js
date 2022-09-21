@@ -5,7 +5,7 @@ const titleElement = document.querySelector("#title");
 const priceElement = document.querySelector("#price");
 const urlElement = document.querySelector("#url");
 
-//* UI Objesini Başlatma
+//* UI Objesini Başlatma */
 
 const ui = new UI();
 
@@ -23,13 +23,15 @@ function addCar(e){
     const url = urlElement.value;
 
     if (title === "" || price === "" || url === ""){
-        //*Boşlık bırakılırsa Hata
+        //*Boşluk bırakılırsa Hata*/
     }
     else{
         //*yeni araç
         const newCar = new Car(title,price,url);
 
-        ui.addCarToUI(newCar); //* arayüze araç ekleme
+        ui.addCarToUI(newCar); 
+        // arayüze araç ekleme/
     }
 
+    e.preventDefault();
 }
