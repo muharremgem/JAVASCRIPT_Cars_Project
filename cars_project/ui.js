@@ -11,13 +11,13 @@ UI.prototype.addCarToUI = function(newCar){
     <td><img src="" class="img-fluid img-thumbnail"></td>
     <td></td>
     <td></td>
-    <td><a href="#" id = "delete-car" class = "btn btn-danger">Aracı Sil</a></td>
+    <td><a href="#" id = "delete-car" class = "btn btn-danger">Car deletel</a></td>
   </tr> -->
   <!-- <tr>
     <td><img src="" class="img-fluid img-thumbnail"></td>
     <td></td>
     <td></td>
-    <td><a href="#" id = "delete-car" class = "btn btn-danger">Aracı Sil</a></td>
+    <td><a href="#" id = "delete-car" class = "btn btn-danger">Car delete</a></td>
   </tr> -->
   */
 
@@ -28,7 +28,7 @@ carList.innerHTML += `
         <td><img src="${newCar.url}" class="img-fluid img-thumbnail"></td>
         <td>${newCar.title}</td>
         <td>${newCar.price}</td>
-        <td><a href="#" id = "delete-car" class = "btn btn-danger">Aracı Sil</a></td>
+        <td><a href="#" id = "delete-car" class = "btn btn-danger">Car delete</a></td>
     </tr> 
 `
 }
@@ -70,7 +70,7 @@ UI.prototype.loadAllCars = function(cars){
         <td><img src="${car.url}" class="img-fluid img-thumbnail"></td>
         <td>${car.title}</td>
         <td>${car.price}</td>
-        <td><a href="#" id = "delete-car" class = "btn btn-danger">Aracı Sil</a></td>
+        <td><a href="#" id = "delete-car" class = "btn btn-danger">Car delete</a></td>
     </tr> 
 `
     });
