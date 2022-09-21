@@ -8,7 +8,7 @@ Project aims to create Cars_Project within html and css.
 
   Project Name       |Libraries and Technologies I use     |How does my project look   
 :-------------------------|-------------------------|-------------------------
-[Cars_Project](https://javascript-cars-projects.vercel.app/#)| Html Bootstrap Js |![Cars_Project](Cars.gif)
+[Cars_Project](https://javascript-cars-projects.vercel.app/#)| Html Bootstrap Js |![Cars_Project](cars.gif)
 
 
 ## Problem Statement
