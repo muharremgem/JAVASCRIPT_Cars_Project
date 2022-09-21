@@ -4,11 +4,11 @@ Car Project
 
 
 ## Description
-Project aims to create Todo_list within html and css.
+Project aims to create Cars_Project within html and css.
 
   Project Name       |Libraries and Technologies I use     |How does my project look   
 :-------------------------|-------------------------|-------------------------
-[Cars_Project](https://javascript-cars-projects.vercel.app/#)| Html Bootstrap Js |![Cars_Project](cars.gif)
+[Cars_Project](https://javascript-cars-projects.vercel.app/#)| Html Bootstrap Js |![Cars_Project](Cars.gif)
 
 
 ## Problem Statement
@@ -22,7 +22,9 @@ Project aims to create Todo_list within html and css.
 
 
 Todo_list (folder)
+
 |----cars_project
+
     |----readme.md                 
     |----index.html  
     |----car.js
