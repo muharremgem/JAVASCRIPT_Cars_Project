@@ -5,11 +5,14 @@ const titleElement = document.querySelector("#title");
 const priceElement = document.querySelector("#price");
 const urlElement = document.querySelector("#url");
 
-//* UI Objesini Başlatma */
+// UI Objesini Başlatma /
 
 const ui = new UI();
 
-//* Tüm Eventleri Yükleme
+const storage = new Storage();
+
+
+// Tüm Eventleri Yükleme//
 
 eventListeners();
 
@@ -23,14 +26,24 @@ function addCar(e){
     const url = urlElement.value;
 
     if (title === "" || price === "" || url === ""){
-        //*Boşluk bırakılırsa Hata*/
+        //Boşluk bırakılırsa Hata/
+
+        ui.displayMessage("Tüm alanları doldurun...","danger");
+        
     }
     else{
-        //*yeni araç
+        //yeni araç//
+
         const newCar = new Car(title,price,url);
 
-        ui.addCarToUI(newCar); 
+
         // arayüze araç ekleme/
+
+        ui.addCarToUI(newCar); 
+
+        storage.addCarToStorage(newCar);
+        
+        ui.displayMessage("Araç başarıyla eklendi...", "success");
     }
 
     ui.clearInputs(titleElement,urlElement,priceElement);

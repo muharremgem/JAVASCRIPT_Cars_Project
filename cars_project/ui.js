@@ -1,9 +1,6 @@
 
 function UI(){
 
-
-
-
     
 }
 
@@ -40,4 +37,27 @@ UI.prototype.clearInputs = function (element1, element2,element3){
     element1.value = "";
     element2.value = "";
     element3.value = "";
+}
+
+UI.prototype.displayMessage = function(message,type){
+    
+    const cardBody = document.querySelector(".card-body");
+
+    //Alert Divini Oluşturma//
+
+    const div = document.createElement("div");
+
+    div.className = `alert alert-${type}`;
+    div.textContent = message;
+
+    cardBody.appendChild(div);
+    
+    //alert çıktıkdan sonra devamlı kalmaması için, 2 sn sonra silinme işlemi//
+    
+    setTimeout(function(){
+        div.remove();
+
+    },2000);
+
+
 }
