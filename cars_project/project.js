@@ -87,7 +87,7 @@ function deleteCar(e){
 
 function clearAllCars(){
   
-    if(confirm("Tüm araçlar silinecek.Emin misiniz?")){
+    if(confirm("Tüm araçlar silinecek. Emin misiniz?")){
         ui.clearAllCarsFromUI();
         storage.clearAllCarsFromStorage();
     

@@ -80,7 +80,7 @@ UI.prototype.deleteCarFromUI = function(element){
     element.parentElement.parentElement.remove();
 }
 
-UI.prototype.clearAllCarsFormUI = function(){
+UI.prototype.clearAllCarsFromUI = function(){
     const carList = document.getElementById("cars");
 
     // carList.innerHTML = ""; daha yavaş bi işlem olur bu şelikde...
