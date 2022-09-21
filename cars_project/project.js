@@ -63,9 +63,17 @@ function addCar(e){
     e.preventDefault();
 }
 
+// Araç sil butonuna tıkladığımızda gelen verilerin silinmesi için yapılan işlerm//
+
 function deleteCar(e){
 
     if(e.target.id === "delete-car"){
         ui.deleteCarFromUI(e.target);
+
+        //localden silme//
+        storage.deleteCarFromStorage(e.target.parentElement.previousElementSibling.previousElementSibling.textContent);
+
+        //sildikden sonra uyarı mesajı//
+        ui.displayMessage("Silme işlemi başarıyla gerçekleşti...", "success")
     }
 }
