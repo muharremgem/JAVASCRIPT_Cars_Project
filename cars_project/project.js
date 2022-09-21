@@ -5,6 +5,8 @@ const titleElement = document.querySelector("#title");
 const priceElement = document.querySelector("#price");
 const urlElement = document.querySelector("#url");
 const cardbody = document.querySelectorAll(".card-body")[1];
+const clear = document.getElementById("clear-cars");
+
 
 
 // UI Objesini Başlatma /
@@ -27,6 +29,9 @@ function eventListeners(){
     });
 
     cardbody.addEventListener("click", deleteCar);
+
+    clear.addEventListener("click", clearAllCars);
+
 
 
 }
@@ -75,5 +80,17 @@ function deleteCar(e){
 
         //sildikden sonra uyarı mesajı//
         ui.displayMessage("Silme işlemi başarıyla gerçekleşti...", "success")
+    }
+}
+
+//Tüm Araçları silmek için//
+
+function clearAllCars(){
+  
+    if(confirm("Tüm araçlar silinecek.Emin misiniz?")){
+        ui.clearAllCarsFromUI();
+        storage.clearAllCarsFromStorage();
+    
+
     }
 }

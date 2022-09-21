@@ -79,3 +79,14 @@ UI.prototype.loadAllCars = function(cars){
 UI.prototype.deleteCarFromUI = function(element){
     element.parentElement.parentElement.remove();
 }
+
+UI.prototype.clearAllCarsFormUI = function(){
+    const carList = document.getElementById("cars");
+
+    // carList.innerHTML = ""; daha yavaş bi işlem olur bu şelikde...
+
+    while(carList.firstElementChild !== null){
+        carList.firstElementChild.remove();
+    }
+
+}

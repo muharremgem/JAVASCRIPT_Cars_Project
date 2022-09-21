@@ -31,8 +31,15 @@ Storage.prototype.deleteCarFromStorage = function(carTitle){
     cars.forEach(function(car,index){
         cars.splice(index,1);
         localStorage.setItem("cars",JSON.stringify(cars));
-        
+
 
     });
+
+}
+
+Storage.prototype.clearAllCarsFromStorage = function(){
+
+    localStorage.removeItem("cars");
+
 
 }
