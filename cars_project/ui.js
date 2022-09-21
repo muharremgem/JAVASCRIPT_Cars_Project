@@ -53,11 +53,25 @@ UI.prototype.displayMessage = function(message,type){
     cardBody.appendChild(div);
     
     //alert çıktıkdan sonra devamlı kalmaması için, 2 sn sonra silinme işlemi//
-    
+
     setTimeout(function(){
         div.remove();
 
     },2000);
 
+}
 
+UI.prototype.loadAllCars = function(cars){
+    const carList = document.getElementById("cars");
+
+    cars.forEach(function(car){
+        carList.innerHTML += ` 
+    <tr>
+        <td><img src="${car.url}" class="img-fluid img-thumbnail"></td>
+        <td>${car.title}</td>
+        <td>${car.price}</td>
+        <td><a href="#" id = "delete-car" class = "btn btn-danger">Aracı Sil</a></td>
+    </tr> 
+`
+    });
 }

@@ -18,6 +18,12 @@ eventListeners();
 
 function eventListeners(){
     form.addEventListener("submit",addCar);
+
+    document.addEventListener("DOMContentLoaded",function(){
+        let cars = storage.getCarsFromStorage();
+        ui.loadAllCars(cars);
+    });
+
 }
 
 function addCar(e){
@@ -42,7 +48,7 @@ function addCar(e){
         ui.addCarToUI(newCar); 
 
         storage.addCarToStorage(newCar);
-        
+
         ui.displayMessage("Araç başarıyla eklendi...", "success");
     }
 
